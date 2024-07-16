@@ -1,0 +1,182 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
+
+.container{
+  width: 1200px; height: 700px;
+  margin: 0px auto;
+}
+
+.header{
+  height: 100px;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.logo{
+  width: 200px; height: 100px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  width: 600px; height: 40px;
+  border: 1px solid #fff;
+  display: flex;  
+  margin-right: 15px;
+}
+.menu>li{
+  width: 150px;
+  text-align: center;
+  line-height: 40px;
+}
+.menu>li>a{
+  display: block;
+  background-color: pink;
+}
+.submenu{
+  /* position: absolute 로 부모영역 100%라는 개념이 사라짐.
+    너비값 변해져서 width 값 다시주기. */
+  position: absolute;
+  width: 150px;
+  font-size: 14px;
+  z-index: 10;
+}
+.submenu a{
+  display: block;
+}
+.menu>li:hover>a{
+  background-color: green;
+  color: #fff;
+}
+.submenu a:hover{
+  background-color: purple;
+  color: #fff;
+}
+.sub_bg{
+  width: 1200px;
+  height: 150px;
+  position: absolute;
+  top: 100px;
+  z-index: 9;
+  background-color: rgba(255, 105, 180, 0.7);
+}
+
+
+.main{
+  height: 300px;
+  background-color: yellow;
+}
+
+
+.contents{
+  height: 200px;
+  background-color: yellowgreen;
+  display: flex;
+}
+.conbox{
+  /* flex: 1; */
+  width: 400px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.tab_title{
+  width: 100px; height: 30px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  position: relative;
+  top: 1px;
+}
+.tab_box{
+  height: 140px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+/* 공지사항 구현 */
+.notice{
+  margin: 10px;
+  font-size: 13px;
+  /* line-height : 글자기준으로 %로 줄 수 있음. */
+  line-height: 180%;
+}
+/* 공지사항 제목의 길이가 다 다를테니 그걸 조정하기 위한 css */
+.notice>li{
+  display: flex;
+  /* 제목(a)왼쪽끝 - 날짜(span)오른쪽끝 */
+  justify-content: space-between;
+}
+.notice>li>a{
+  /* 오버플로우 줄 수 있게 너비 지정, 그리고 아래 속성들 다 작성하기 */
+  width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notice>li>a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.footer{
+  height: 100px;
+  background-color: skyblue;
+  display: flex;
+}
+.copyright{
+  width: 750px;
+  background-color: cornflowerblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.familysite{
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.popup_bg{
+  position: fixed;
+  left: 0;  top: 0;
+  width: 100%; height: 100%;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.popup{
+  position: fixed;
+  left: 40%;  top: 40%;
+  width: 400px;
+  border: 4px solid red;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.popup>p:nth-child(1){
+  text-align: center;
+  font-weight: bold;
+  line-height: 50px;
+}
+.popup>p:nth-child(2){
+  padding: 20px;
+  height: 250px;
+}
+.popup>div{
+  text-align: center;
+}
+.close{
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: #555;
+  padding: 10px;
+}

@@ -1,0 +1,136 @@
+@charset "utf-8";
+/* 초기화 4가지 : 여백, <li>, <a>, 기본글꼴, 글자색 font-family 시험에서는 맑은 고딕 */
+*{margin: 0; padding: 0}
+li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
+
+/* 배경색 : 넣어서 구역 확인해보기 */
+/* 컨테이너 */
+.container{
+  width: 1000px; height: 650px;
+  display: flex;
+  border: 1px solid #000;
+}
+/* 헤더 */
+.header{
+  width: 200px; height: 650px;
+  background-color: red;
+}
+.logo{
+  width: 200px; height: 100px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  width: 180px;
+  margin: 20px auto;
+  border: 1px solid #000;
+}
+.menu>li{
+  text-align: center;
+  line-height: 40px;
+}
+.menu>li>a{
+  display: block;
+  background-color: pink;
+  transition: all 0.3s;
+}
+.submenu>li>a{
+  display: block;
+  background-color: hotpink;
+  transition: all 0.3s;
+}
+.submenu>li>a:hover{
+  background-color: skyblue;
+  color: #fff;
+}
+.menu>li:hover>a{
+  /* submenu도 menu>li에 포함되니까 li에 hover될때 menu>li>a 의 색상 변경*/
+  background-color: navy;
+  color: #fff;
+}
+/* 오른쪽구역 */
+.right{
+  width:800px;
+}
+/* 메인-슬라이드 */
+.main{
+  height: 350px;
+  background: green;
+}
+/* 컨텐츠 */
+.contents{
+  height: 200px;
+  background-color: yellow;
+  display: flex;
+}
+.conbox{
+  /* 요소 3개 1만큼의 비율을 갖게 나오기 */
+  /* flex는 기본적으로 부모 높이만큼 길이를 늘림 */
+  flex: 1;
+}
+.conbox:nth-child(1){
+  background-color: #aaa;
+}
+.conbox:nth-child(2){
+  background-color: #888;
+}
+.conbox:nth-child(3){
+  background-color: #000;
+}
+.tab_title{
+  display: flex;
+  margin: 10px 0 0 10px;
+  /* 선위치만큼 내려서 겹쳐보이게끔 보여줌
+     -> 상대적위치(내가지금있는위치기준) relative */
+  position: relative;
+  top: 1px;
+}
+.tab_title>li{
+  width: 80px; line-height: 30px;
+  text-align: center;
+  background-color: #ccc;
+  border: 1px solid #000;
+  font-size: 13px;
+  cursor: pointer;
+}
+.active{
+  background-color: #fff !important;
+  border-bottom-color: #fff !important; /* 강제로 우선순위 높이기 */
+}
+.tab_box{
+  width: 95%; height: 150px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-left: 5px;
+}
+
+/* 풋터 */
+.footer{
+  height: 100px;
+  background-color: orange;
+  display: flex;
+}
+.f_right{
+  width: 600px;
+}
+.f_menu{
+  height: 50px;
+  background-color: orange;
+}
+.copy{
+  height: 50px;
+  background-color: skyblue;
+}
+
+.popup{
+  width: 300px; height: 200px;
+  background-color: yellow;
+  border: 3px solid blue;
+  position: fixed;
+  left: 25%; top: 35%;
+  z-index: 10;
+}

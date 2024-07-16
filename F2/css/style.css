@@ -1,0 +1,247 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
+
+.header{
+  width: 1340px; height: 100px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.logo{
+  width: 200px; height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  width: 600px; height: 40px;
+  border: 1px solid #000;
+  display: flex;
+  margin-right: 20px;
+}
+.menu>li{
+  width: 150px; height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.menu>li>a{
+  display: block;
+  background-color: #ddd;
+}
+.submenu{
+  width: 150px;
+  font-size: 14px;
+  position: absolute;
+  z-index: 10;;
+}
+.submenu a{
+  display: block;
+  background-color: #eeea;
+}
+.submenu a:hover{
+  color: #1b3b86;
+  font-weight: bold;
+}
+.menu>li:hover>a{
+  background-color: #1b3b86;
+  color: #fff;
+  font-weight: bold;
+}
+
+.main{
+  width: 100%; height: 350px;
+  background-color: greenyellow;
+}
+
+
+.wrap{
+  width: 1340px; height: 720px;
+  margin: 0px auto;
+  position: relative;
+  bottom: 100px;
+  z-index: 10;
+}
+
+.contents{
+  height: 600px;
+  background-color: #ff09;
+}
+.con1{
+  width: 100%; height: 100px;
+}
+.icons{
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.icons>li{
+  width: 150px; height: 60px;
+  /* background-color: red; */
+}
+.icons>li>a{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons>li img{
+  width: 40px;
+  margin-right: 5px;
+}
+.icons>li:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.con2{
+  width: 100%; height: 200px;
+}
+.con2 img{
+  width: 100%; height: 100%;
+}
+.con3{
+  width: 100%; height: 300px;
+  display: flex;
+}
+.con3_box{
+  width: 50%; height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.tab_title{
+  width: 100px; height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #fff;
+  border: 1px solid #1b3b86;
+  border-bottom-color: #fff;
+  position: relative;
+  top: 1px;
+}
+.tab_box{
+  height: 230px;
+  background-color: #fff;
+  border: 1px solid #1b3b86;
+}
+.notice{
+  margin: 20px;
+}
+.notice>li{
+  display: flex;
+  justify-content: space-between;
+  line-height: 230%;
+}
+.notice>li>a{
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notice>li>a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.gallery{
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gallery>li{
+  overflow: hidden;
+  width: 30%; height: 190px
+}
+.gallery>li>a{
+  display: block;
+  text-align: center;
+}
+.gallery img{
+  width: 180px; height: 150px
+}
+.gallery>li:hover img{
+  opacity: 0.6;
+}
+.gallery>li:hover p{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer{
+  height: 120px;
+  display: flex;
+}
+.copyright{
+  width: 1040px;
+  display: flex;
+  margin-left: 20px;
+  align-items: center;
+}
+.f_right{
+  width: 300px; height: 120px;
+}
+.sns{
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* F, T, I 한글자씩 적혀있을때
+.sns>li>a{
+  display: block;
+  width: 40px; height: 40px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.sns>li:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.familysite{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.familysite select{
+  padding: 10px;
+}
+
+
+.popup_bg{
+  width: 100%; height: 100%;
+  background-color: #0007;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 20;
+}
+.popup{
+  width: 450px;
+  background-color: #fff;
+  border: 4px solid #1b3b86;
+  position: fixed;
+  left: 40%; top: 35%;
+  padding: 10px;
+  text-align: center;
+}
+.popup>p:nth-child(1){
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 50px;
+}
+.popup>p:nth-child(2){
+  line-height: 280%;
+}
+.close{
+  margin-top: 30px;
+  padding: 10px;
+  border: none;
+  background-color: #1b3b86;
+  color: #fff;
+  cursor: pointer;
+}

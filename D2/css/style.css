@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
+
+.container{
+  width: 100%; height: 750px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.header{
+  width: 200px; height: 650px;
+  background-color: pink;
+}
+.logo{
+  width: 200px; height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  width: 180px;
+  margin: 20px auto;
+  border: 1px solid #666;
+}
+.menu>li{
+  text-align: center;
+  line-height: 40px;
+}
+.menu>li>a{
+  display: block;
+  background-color: #ccc;
+}
+.submenu a{
+  font-size: 14px;
+  display: block;
+  background-color: #eee;
+}
+.menu>li:hover>a{
+  background-color: orangered;
+  color: #fff;
+}
+.submenu a:hover{
+  background-color: orange;
+  color: #fff;
+}
+
+
+.right{
+  width: calc(100% - 200px); height: 650px;
+  /* con1 배치용 */
+  position: relative; 
+}
+
+.main{
+  width: calc(100% - 230px); height: 400px;
+  background-color: yellow;
+}
+
+.contents{
+  width: 100%; height: 250px;
+  background-color: pink;
+  display: flex;
+}
+.con1{
+  width: 230px; height: 400px;
+  background-color: aqua;
+  position: absolute;
+  top: 0; right: 0;
+}
+.con1 img{
+  width: 100%; height: 100%;
+}
+/* 배너 위에 글씨 작성하는 법 */
+.con1 a{
+  display: block;
+  /* block 요소로 바꾸면 a 는 높이를 무시하니까 높이 재작성 */
+  height: 100%;
+}
+.con1 a:after{
+  content: '바로가기>';
+  position: absolute;
+  left: 35%; bottom: 20px;
+  color: #fff;
+}
+.con1 a:hover:after{
+  color: #ffc9ff;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.con2{
+  width: 50%; height: 250px;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: hotpink;
+}
+.tab_title{
+  width: 100px; height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #000;
+  border-bottom-color: #fff;
+  background-color: #fff;
+  position: relative;
+  top: 1px;
+}
+.tab_box{
+  height: 180px;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+.notice{
+  margin: 20px;
+}
+.notice>li{
+  display: flex;
+  justify-content: space-between;
+  line-height: 220%;
+}
+.notice>li>a{
+  width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notice>li>a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.con3{
+  width: 50%; height: 250px;
+  background-color: bisque;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.gallery{
+  display: flex;
+  height: 100%; /* align-items 사용하려면 높이값 있어야함. */
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gallery>li{
+  width: 30%;
+  overflow: hidden;
+}
+.gallery>li>a{
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
+.gallery>li>a img{
+  width: 100%; height: 130px;
+}
+.gallery>li>a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+}
+.gallery>li>a img:hover{
+  opacity: 0.6;
+}
+
+
+.footer{
+  width: 100%; height: 100px;
+  display: flex;
+  background-color: yellowgreen;
+}
+.footer .logo{
+  /* footer안에 있는 로고는 grayscale */
+  filter: grayscale(100%);
+}
+.copyright{
+  width: calc(100% - 450px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.familysite{
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.familysite select{
+  border: none;
+  padding: 10px;
+}
+
+
+.popup_bg{
+  width: 100%; height: 100%;
+  position: fixed;
+  left: 0; top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.popup{
+  width: 450px;
+  position: fixed;
+  left: 35%; top: 30%;
+  background-color: #fff;
+  border: 4px solid orangered;
+}
+.popup>p:nth-child(1){
+  line-height: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+.popup>p:nth-child(2){
+  padding: 20px;
+  font-size: 14px;
+  line-height: 180%;
+}
+/* 팝업창 버튼위치 */
+.popup>div{
+  text-align: end;
+}
+.close{
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: orangered;
+  border: none;
+}
