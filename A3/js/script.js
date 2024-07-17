@@ -31,3 +31,30 @@ $(".tab_title>li:nth-child(1)").click(function(){
   $(this).addClass("active");
   $(this).siblings().removeClass("active");
 });
+
+
+/* 서브메뉴 종류
+  1. 가로
+    1) 그부분만 나오게 <- A3 유형
+    2) 배경이랑 함께 다같이 나오게
+  2. 세로
+    1) 아래로 나오게
+    2) 옆으로 나오게
+    3) 옆으로 크기가 커지고 나오게 */
+
+/* 서브메뉴구현
+  1. 서브메뉴 숨기기
+  2. 메뉴에 mouseover/mouseout될때 그 li의 children 만 보이거나 사라짐
+    - fadeIn(시간(ms)) : 서서히 나타나게
+    - slideDown(시간(ms)) : 아래로 펼쳐지면서 나타남
+    - fadeOut(시간(ms)) : 서서히 사라지게
+    - slideUp(시간(ms))
+  3. mouse 메뉴는 stop() 을 필수로 적어줘야함.
+*/
+$(".submenu").hide();
+$(".menu>li").mouseover(function(){
+  $(this).children(".submenu").stop().fadeIn();
+})
+$(".menu>li").mouseout(function(){
+  $(this).children(".submenu").stop().fadeOut(); 
+})
