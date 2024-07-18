@@ -1,0 +1,165 @@
+@charset "utf-8";
+*{margin: 0; padding: 0}
+li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
+
+.container{
+  width: 100%; height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header{
+  width: 200px; height: 800px;
+}
+.logo{
+  width: 200px; height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+.menu{
+  width: 180px;
+  margin: 20px auto;
+  border: 1px solid #000;;
+}
+.menu>li{
+  text-align: center;
+  line-height: 40px;
+}
+.menu>li>a{
+  display: block;
+  background-color: aqua;
+}
+.submenu{
+  font-size: 14px;
+  background-color: #aaa;
+  position: absolute;
+  z-index: 10;
+  width: 170px;
+  /* absolute 전 처음 위치는 menu>li의 아래임.
+    해당하는 menu>li 옆에 붙기위해서
+    margin-top 을 line-height 값 만큼 주면됨. */
+  margin-top: -40px;
+  left: 191px;
+}
+.submenu a{
+  display: block;
+}
+.submenu a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.menu>li:hover>a{
+  background-color: navy;
+  color: #fff;
+}
+.spot{
+  font-size: 13px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contents{
+  width: 400px; height: 800px;
+}
+
+.con1{
+  height: 150px;
+}
+.con1 a{
+  /* after 넣기위해서 flex
+    position : a 기준으로 after가 absolute 되게 */
+  display: flex;
+  position: relative;
+}
+.con1 img{
+  width: 100%; height: 150px;
+}
+.con1 a::after{
+  content: "Click >";
+  position: absolute;
+  background-color: aqua;
+  right: 10px; bottom: 10px;
+  padding: 5px;
+}
+
+.con2, .con3{
+  height: 325px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.tab_title{
+  width: 80px; height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #000;
+  border-bottom-color: #fff;
+  /* background-color: #fff; */
+  position: relative;
+  top: 1px;
+}
+.tab_box{
+  height: 250px;
+  border: 1px solid #000;
+  /* background-color: #fff; */
+}
+
+.notice{
+  margin: 30px 10px;
+}
+.notice>li{
+  line-height: 320%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.notice>li>a{
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notice>li a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.gallery{
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gallery>li{
+  width: 150px;
+  overflow: hidden;
+}
+.gallery>li>a{
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+.gallery>li img{
+  width: 100%;
+}
+.gallery>li:hover img{
+  opacity: 0.6;
+}
+.gallery>li:hover p{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.main{
+  width: calc(100% - 600px); height: 800px;
+  background-color: yellow;
+}
+
+.footer{
+  width: 100%; height: 100px;
+  background-color: green;
+}
