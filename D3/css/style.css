@@ -35,7 +35,7 @@ html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
 }
 .submenu{
   font-size: 14px;
-  background-color: #ddd7;
+  background-color: #dddd;
   position: absolute;
   z-index: 10;
   left: 191px;
@@ -67,6 +67,7 @@ html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
 
 .right{
   width: calc(100% - 200px); height: 850px;
+  position: relative;
 }
 
 .main{
@@ -76,10 +77,188 @@ html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
 
 .contents{
   height: 450px;
-  background-color: yellow;
+}
+.con1{
+  width: 100px; height: 300px;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top:0; right:0;
+  z-index: 3;
+}
+.con1>li{
+  width: 100px; height: 100px;
+}
+.con1>li>a{
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.con1>li img{
+  width: 50px;
+}
+.con1>li>a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.con2{
+  height: 200px;
+}
+.con2 a{
+  display: block;
+  position: relative;
+}
+.con2 a img{
+  display: block;
+  width: 100%; height: 200px;
+}
+.con2 a::after{
+  content: "Click>";
+  position: absolute;
+  right: 180px;
+  top: 15px;
+  color: #fff;
+  background-color: navy;
+  padding: 10px;
+  font-size: 20px;
+}
+.con2 a:hover::after{
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.con3{
+  height: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.tab_title{
+  display: flex;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+}
+.tab_title>li{
+  width: 100px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #666;
+  background-color: #eee;
+}
+.active{
+  background-color: #fff !important;
+  border-bottom-color: #fff !important;
+  font-weight: bold;
+}
+.tab_box{
+  height: 170px;
+  border: 1px solid #666;
+}
+.notice{
+  padding: 10px;
+}
+.notice>li{
+  display: flex;
+  justify-content: space-between;
+  line-height: 230%;
+}
+.notice>li>a{
+  width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notice>li>a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.gallery{
+  height: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gallery>li{
+  width: 250px; height: 150px;
+  overflow: hidden;
+}
+.gallery>li>a{
+  /* 인라인요소에 자식요소 포함해주려고 block으로 바꿔주기 필수! */
+  display: block;  
+  text-align: center;
+  font-size: 14px;
+}
+.gallery>li img{
+  width: 250px; height: 120px;
+}
+.gallery>li:hover img{
+  opacity: 0.6;
+}
+.gallery>li:hover p{
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .footer{
   width: 100%; height: 120px;
-  background-color: green;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid  #666;
+  box-sizing: border-box;
+}
+.footer .logo{
+  filter: grayscale(100%);
+}
+.f_right{
+  width: calc(100% - 200px); height: 120px;
+  font-size: 14px;
+}
+.f_menu{
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f_menu>li{
+  margin: 0 10px;
+}
+.copyright{
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.popup{
+  width: 400px;
+  border: 4px solid yellowgreen;
+  background-color: #fff;
+  position: fixed;
+  top: 30%; left: 30%;
+  padding: 10px;
+}
+.popup>p:nth-child(1){
+  font-weight: bold;
+  line-height: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+.popup>p:nth-child(2){
+  line-height: 150%;
+}
+.popup>div{
+  margin-top: 50px;
+  text-align: end;
+}
+.close{
+  padding: 10px;
+  border: none;
+  background-color: yellowgreen;
+  cursor: pointer;
 }

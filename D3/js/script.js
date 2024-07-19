@@ -5,3 +5,25 @@ $(".menu>li").mouseover(function(){
 $(".menu>li").mouseout(function(){
   $(".submenu").stop().fadeOut();
 })
+
+$(".gallery").hide();
+$(".tab_title>li:nth-child(2)").click(function(){
+  $(".gallery").show();
+  $(".notice").hide();
+  $(this).addClass("active");
+  $(this).siblings().removeClass("active");
+})
+$(".tab_title>li:nth-child(1)").click(function(){
+  $(".gallery").hide();
+  $(".notice").show();
+  $(this).addClass("active");
+  $(this).siblings().removeClass("active");
+})
+
+$(".popup").hide();
+$(".notice>li:nth-child(1)").click(function(){
+  $(".popup").show();
+})
+$(".close").click(function(){
+  $(".popup").hide();
+})
