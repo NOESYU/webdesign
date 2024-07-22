@@ -1,0 +1,250 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+html, body{font-family: '맑은 고딕', sans-serif; color: #666;}
+
+/* 주:#0a9b97 보:#f04467 */
+
+.header{
+  width: 1340px; height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.logo{
+  width: 200px; height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  width: 600px; height: 40px;
+  display: flex;
+  margin-right: 30px;
+}
+.menu>li{
+  width: 150px; line-height: 40px;
+  text-align: center;
+}
+.menu>li>a{
+  display: block;
+  background-color: #ddd;
+}
+.submenu{
+  width: 150px;
+  position: absolute;
+  z-index: 10;
+  font-size: 14px;
+}
+.submenu a{
+  display: block;
+}
+.submenu a:hover{
+  color: #f04467; 
+  font-weight: bold;
+  text-decoration: underline;
+}
+.menu>li:hover>a{
+  color: #fff;
+  background-color: #0a9b97;
+  font-weight: bold;
+}
+.sub_bg{
+  width: 100%; height: 170px;
+  background-color: #eeee;
+  position: absolute;
+  top: 100px; left: 0;
+  z-index: 9;
+}
+
+
+.main{
+  height: 350px;
+  background-color: orange;
+}
+
+
+.wrap{
+  width: 1340px; height: 720px;
+  margin: 0 auto;
+  position: relative;
+  top: -100px;
+}
+
+.contents{
+  height: 600px;
+}
+.con1{
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.con1>li>a{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.con1>li img{
+  width: 60px; height: 60px;
+  padding-right: 10px;
+}
+.con1>li>a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.con2{
+  height: 200px;
+}
+.con2>a{
+  display: flex;
+  width: 100%; height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  line-height: 30px;
+  background: url(../imgs/banner.jpg) center center no-repeat;
+  background-size: cover;
+  color: #eee;
+}
+/* 아래는 걍 hover용 */
+.con2>a>p{
+  transition: all 0.5s;
+  margin-left: -200px;
+}
+.con2>a:hover>p{
+  margin-left: 200px;
+}
+
+.con3{
+  height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.tab_title{
+  display: flex;
+  position: relative;
+  top: 1px;
+}
+.tab_title>li{
+  width: 100px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #000;
+  background-color: #eee;
+  cursor: pointer;
+}
+.active{
+  background-color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+.tab_box{
+  border: 1px solid #000;
+  width: 700px; height: 220px;
+}
+.notice{
+  margin: 20px;
+}
+.notice>li{
+  display: flex;
+  justify-content: space-between;
+  line-height: 230%;
+}
+.notice>li>a{
+  width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notice>li>a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.gallery{
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gallery>li>a{
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.gallery>li img{
+  width: 200px; height: 150px;
+  margin-bottom: 5px;
+}
+.gallery>li:hover img{
+  opacity: 0.6;
+}
+.gallery>li:hover p{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer{
+  height: 120px;
+  display: flex;
+  border-top: 1px solid #666;
+  box-sizing: border-box;
+}
+.footer .logo{
+  height: 120px;
+  display: flex;
+  align-items: center;
+  filter: grayscale(100%);
+}
+.f_right{
+  width: 1140px;
+  margin-left: 30px;
+  font-size: 13px;
+}
+.f_menu{
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.f_menu>li{
+  margin-right: 25px;
+}
+.f_menu>li:hover{
+  text-decoration: underline;
+}
+.copyright{
+  height: 60px;
+  align-items: center;
+}
+
+.popup{
+  width: 470px;
+  border: 3px solid #0a9b97;
+  background-color: #fff;
+  position: fixed;
+  padding: 10px;
+  top: 30%; left: 40%;
+}
+.popup>p:nth-child(1){
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+.popup>p:nth-child(2){
+  line-height: 150%;
+  font-size: 14px;
+}
+.popup>div{
+  text-align: center;
+}
+.close{
+  margin-top: 30px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0a9b97;
+  color: #fff;
+  cursor: pointer;  
+}
