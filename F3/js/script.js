@@ -32,3 +32,14 @@ $(".notice>li:nth-child(1)").click(function(){
 $(".close").click(function(){
   $(".popup").hide();
 })
+
+// slide script code
+// 반복 : setInterval(코드(함수), 시간)
+setInterval(slide); // 호출
+
+function slide(){ // 함수정의
+  // animate({속성}, 시간)
+  $(".slide").delay(2000).animate({marginLeft:"-100%"}, 1000);
+  $(".slide").delay(2000).animate({marginLeft:"-200%"}, 1000);
+  $(".slide").delay(2000).animate({marginLeft:"0%"}, 1000);
+}

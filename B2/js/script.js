@@ -13,3 +13,12 @@ $(".menu").mouseover(function(){
 $(".menu").mouseout(function(){
   $('.submenu, .sub_bg').stop().fadeOut();
 })
+
+
+setInterval(slide);
+function slide(){
+  // marign: 고정값으로 주기
+  $(".slide").delay(2000).animate({marginTop: "-300px"}, 1000);
+  $(".slide").delay(2000).animate({marginTop: "-600px"}, 1000);
+  $(".slide").delay(2000).animate({marginTop: "0"}, 1000);
+}

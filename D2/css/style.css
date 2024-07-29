@@ -58,8 +58,45 @@ html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
 
 .main{
   width: calc(100% - 230px); height: 400px;
-  background-color: yellow;
+  position: relative;
+  overflow: hidden;
 }
+.slide{
+  width: 100%; height: 100%;
+  position: absolute;
+}
+.slide>a{
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.slide>a>p{
+  font-weight: bold;
+  background-color: #fff9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.slide1>a{
+  background: url(../imgs/slide1.jpg) center center no-repeat;
+  background-size: cover;
+}
+.slide2>a{
+  background: url(../imgs/slide2.jpg) center center no-repeat;
+  background-size: cover;
+}
+.slide3>a{
+  background: url(../imgs/slide3.jpg) center center no-repeat;
+  background-size: cover;
+}
+.slide2{
+  left: 100%; top: 0;
+}
+.slide3{
+  left: 200%; top: 0;
+}
+
 
 .contents{
   width: 100%; height: 250px;

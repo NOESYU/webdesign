@@ -58,3 +58,23 @@ $(".menu>li").mouseover(function(){
 $(".menu>li").mouseout(function(){
   $(this).children(".submenu").stop().fadeOut(); 
 })
+
+
+/* fadeIn, Out slide 구현
+  1. slide2, slide3 숨기기
+  2. 딜레이걸어주기
+  3. In, Out 할 대상들 지정해주기
+*/
+$(".slide2, .slide3").hide();
+setInterval(slide);
+function slide(){
+  $(".slide").delay(2000);
+  $(".slide2").fadeIn(1000);
+  $(".slide1").fadeOut(1000);
+  $(".slide").delay(2000);
+  $(".slide3").fadeIn(1000);
+  $(".slide2").fadeOut(1000);
+  $(".slide").delay(2000);
+  $(".slide1").fadeIn(1000);
+  $(".slide3").fadeOut(1000);
+}
