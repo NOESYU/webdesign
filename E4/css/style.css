@@ -1,0 +1,264 @@
+@charset "utf-8";
+*{margin: 0; padding: 0}
+li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
+
+.container{
+  width: 100%; height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.header{
+  width: 200px; height: calc(100% - 120px);
+}
+.logo{
+  width: 200px; height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  width: 180px;
+  margin: 20px auto;
+  border: 1px solid #000;
+  position: relative;
+}
+.menu>li{
+  line-height: 40px;
+  text-align: center;
+}
+.menu>li>a{
+  display: block;
+  background-color: sandybrown;
+}
+.submenu{
+  width: 180px;
+  font-size: 14px;
+  position: absolute;
+  left: 181px;
+  margin-top: -40px;
+  z-index: 10;
+}
+.submenu a{
+  display: block;
+  background-color: rgb(245, 222, 179, 0.9);
+}
+.submenu a:hover{
+  background-color: #eee;
+  text-decoration: underline;
+}
+.menu>li:hover>a{
+  background-color: #aaa;
+  font-weight: bold;
+}
+
+
+
+.contents{
+  width: 400px; height: calc(100% - 120px);
+}
+.banner{
+  width: 400px; height: 150px;
+  position: relative;
+}
+.banner>a{
+  display: block;
+  width: 100%; height: 100%;
+}
+.banner>a>img{
+  width: 100%; height: 100%;
+}
+.banner>a::after{
+  content: "이벤트 바로가기";
+  position: absolute;
+  right: 0; bottom: 0;
+  background-color: rgb(244, 164, 96, 0.7);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.banner>a:hover::after{
+  background-color: rgba(97, 97, 97, 0.6);
+  color: #fff;
+  font-weight: bold;
+}
+
+.con2, .con3{
+  width: 400px; height: 270px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+.tab_title{
+  width: 100px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #000;
+  border-bottom-color: #fff;
+  position: relative;
+  top: 1px;
+}
+.tab_box{
+  height: 190px;
+  border: 1px solid #000;
+}
+
+.notice{
+  margin: 10px;
+}
+.notice>li{
+  display: flex;
+  line-height: 250%;
+  justify-content: space-between;
+}
+.notice>li>a{
+  width: 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notice>li>a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.gallery{
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gallery>li{
+  width: 60%; height: 80%;
+  overflow: hidden;
+  font-size: 14px;
+}
+.gallery>li>a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.gallery>li>a>img{
+  width: 150px; height: 130px;
+  margin-bottom: 5px;
+}
+.gallery>li>a:hover{
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.direct{
+  width: 400px; height: calc(100% - 690px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+}
+.direct>li{
+  width: 20%; height: 50%;
+  overflow: hidden;
+}
+.direct>li>a{
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.direct img{
+  margin-bottom: 10px;
+  width: 50%;
+}
+.direct>li>a:hover{
+  opacity: 0.5;
+  text-decoration: underline;
+}
+
+
+.main{
+  width: calc(100% - 600px); height: calc(100% - 120px);
+  position: relative;
+  overflow: hidden;
+}
+.slide{
+  width: 100%; height: 100%;
+  position: absolute;
+}
+.slide>a{
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.slide>a>p{
+  background-color: rgb(244, 164, 96, 0.7);
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.slide1>a{
+  background: url(../imgs/slide1.jpg) center center;
+  background-size: cover;
+}
+.slide2>a{
+  background: url(../imgs/slide2.jpg) center center;
+  background-size: cover;
+}
+.slide3>a{
+  background: url(../imgs/slide3.jpg) center center;
+  background-size: cover;
+}
+.slide2{
+  left: 100%; top: 0;
+}
+.slide3{
+  left: 200%; top: 0;
+}
+
+
+
+.footer{
+  width: 100%; height: 120px;
+  display: flex;
+  border-top: 1px solid #aaa;
+  box-sizing: border-box;
+}
+.footer .logo{
+  width: 200px; height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale(100%);
+}
+.f_right{
+  width: calc(100% - 400px); height: 120px;
+  font-size: 14px;
+}
+.f_menu{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f_menu>li>a{
+  display: block;
+  margin: 20px;
+}
+.f_menu>li>a:hover{
+  text-decoration: underline;
+}
+.copyright{
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.familysite{
+  width: 200px; height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
