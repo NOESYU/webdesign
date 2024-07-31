@@ -1,0 +1,258 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{color: inherit; text-decoration: none;}
+html, body{font-family: '맑은 고딕', sans-serif; color: #333;}
+
+/* 00a818 0005d0 */
+.container{
+  width: 1000px; height: 650px;
+  display: flex;
+}
+
+.header{
+  width: 200px; height: 650px;
+}
+.logo{
+  width: 200px; height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu{
+  width: 180px;
+  margin: 20px auto;
+  border: 1px solid #333;
+  position: relative;
+}
+.menu>li{
+  text-align: center;
+  line-height: 40px;
+}
+.menu>li>a{
+  display: block;
+  background-color: #00a818;
+}
+.submenu{
+  width: 180px; height: 250px;
+  font-size: 14px;
+  position: absolute;
+  left: 181px; top: -40px;
+  background-color: #b8ffc3da;
+  z-index: 10;
+}
+.submenu a{
+  display: block;
+}
+.submenu a:hover{
+  background-color: #eee;
+  text-decoration: underline;
+}
+.menu>li:hover>a{
+  background-color: #888;
+  color: #fff;
+}
+
+.right{
+  width: 800px; height: 650px;
+}
+.main{
+  width: 800px; height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+.slide{
+  width: 100%; height: 100%;
+  position: absolute;
+}
+.slide>a{
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.slide>a>p{
+  background-color: #00008080;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.slide1>a{
+  background: url(../imgs/img1.jpg) center center;
+  background-size: cover;
+}
+.slide2>a{
+  background: url(../imgs/img2.jpg) center center;
+  background-size: cover;
+}
+.slide3>a{
+  background: url(../imgs/img3.jpg) center center;
+  background-size: cover;
+}
+.slide2{
+  left: 800px; top: 0;
+}
+.slide3{
+  left: 1600px; top: 0;
+}
+
+
+.contents{
+  width: 800px; height: 200px;
+  display: flex;
+}
+.con1, .con2{
+  width: 250px; height: 180px;
+  margin: 10px;
+  font-size: 14px;
+}
+.tab_title{
+  width: 80px;
+  line-height: 25px;
+  text-align: center;
+  border: 1px solid #000;
+  border-bottom-color: #fff;
+  position: relative;
+  top: 1px;
+}
+.tab_box{
+  height: 150px;
+  border: 1px solid #000;
+}
+
+.notice{
+  margin: 10px;
+}
+.notice>li{
+  display: flex;
+  justify-content: space-between;
+  line-height: 230%;
+}
+.notice>li>a{
+  width: 65%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notice>li>span{
+  font-size: 12px;
+}
+.notice>li>a:hover{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.gallery{
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gallery img{
+  width: 100%;
+}
+.gallery img:hover{
+  opacity: 0.7;
+}
+
+.con3{
+  width: 250px; height: 180px;
+  margin: 10px;
+  overflow: hidden;
+}
+.direct{
+  width: 100%; height: 100%;
+  position: relative;
+}
+.direct a{
+  display: block;
+  width: 100%; height: 100%;
+}
+.direct a>img{
+  width: 100%; height: 100%;
+}
+.direct a::after{
+  content: "바로가기>>";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  padding: 5px;
+  background-color: #00a81898;
+  color: #fff;
+  border-radius: 10px;
+}
+.direct a:hover::after{
+  background-color: #fff;
+  color: #00a818;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.footer{
+  width: 800px; height: 100px;
+  display: flex;
+  border-top: 1px solid #666;
+  box-sizing: border-box;
+}
+.footer .logo{
+  filter: grayscale(100%);
+}
+.copyright{
+  width: 550px; height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.familysite{
+  width: 150px; height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.familysite select{
+  border: none;
+  padding: 5px;
+  background-color: #00a818;
+  border-radius: 5px;
+  color: #fff;
+}
+
+
+.popup_bg{
+  width: 100%; height: 100%;
+  background-color: #3339;
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 20;
+}
+.popup{
+  width: 300px;
+  border: 3px solid #00a818;
+  background-color: #fff;
+  position: fixed;
+  left: 23%; top: 25%;
+}
+.popup>p:nth-child(1){
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.popup>p:nth-child(2){
+  margin: 10px;
+  line-height: 250%;
+  font-size: 14px;
+}
+.popup>div{
+  text-align: center;
+  margin: 20px;
+}
+.close{
+  cursor: pointer;
+  border: none;
+  background-color: #00a818;
+  color: #fff;
+  padding: 5px;
+}
+
